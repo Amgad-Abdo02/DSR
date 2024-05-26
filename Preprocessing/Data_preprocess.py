@@ -51,20 +51,14 @@ def Dataset_Labeling(df: pd.DataFrame, Condition_col_name:str) -> None:
         Returns:
             None
 
-        """
-        value_pair
-               
+        """         
         value_pair = {}
 
         def labeling(condition: str) -> int:
             label=value_pair[condition]
             return label
     
-        unique_labels = eval(f"df.{Condition_col_name}.unique()")
-
-        df.condition.value_counts()
-
- 
+        unique_labels = df[Condition_col_name].unique()
 
         for i in range(0,len(unique_labels)):
             value_pair[unique_labels[i]]=i
