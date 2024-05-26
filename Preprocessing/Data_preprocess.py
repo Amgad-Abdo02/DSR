@@ -12,14 +12,9 @@ nltk.download('wordnet')
 nltk.download('omw-1.4')
 
 
+def text_preprocessing(text:str) -> str:
 
-
-
-class Preprocessing:
-
-    def text_preprocessing(self,text:str) -> str:
-
-        """Function Applies Lemmatization and lowercase and removes stop words, Punctiouation, Qoutes 
+        """Applies Lemmatization and lowercase and removes stop words, Punctiouation, Qoutes 
             and HTML tags 
 
         Args: data -> (str)
@@ -45,16 +40,23 @@ class Preprocessing:
 
         return clean_words
 
+def Dataset_Labeling(df: pd.DataFrame, Condition_col_name:str) -> None:
+        """ Adds label coloumn in Dataframe that contains the label of each condition 
 
+        Args: 
+            df -> (Dataframe) : dataframe that contains dataset
 
-class Dataset_preprocessing(Preprocessing):
+            Condition_col_name -> (str) : Name of the Conditions column
 
-    def Label_preprocessing(self,df: pd.DataFrame, Condition_col_name) -> pd.DataFrame:
-        global value_pair
+        Returns:
+            None
+
+        """
+        value_pair
                
         value_pair = {}
 
-        def labeling(condition):
+        def labeling(condition: str) -> int:
             label=value_pair[condition]
             return label
     
@@ -68,6 +70,8 @@ class Dataset_preprocessing(Preprocessing):
             value_pair[unique_labels[i]]=i
 
         df["label"]=df[Condition_col_name].apply(labeling)
+
+ 
         
         
 
