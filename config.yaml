@@ -1,0 +1,12 @@
+Epochs: 2
+
+LEARNING_RATE : 1e-05
+
+dataset_dir : "/dataset/"
+
+checkpoint_src: "/Checkpoint/Checkpoint.pth"
+
+checkpoint_dest: "/Checkpoint/Checkpoint.pth"
+
+
+
