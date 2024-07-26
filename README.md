@@ -1,4 +1,5 @@
-# Overview
+#Drug Reccomendation System
+## Overview
 Using the [Drug reviews Dataset](https://archive.ics.uci.edu/dataset/462/drug+review+dataset+drugs+com) we finetune a pretrained distilBert Model on the dataset to make the model understand patient symptoms and classify their condtion, then use a reccomendation algorithm based on drug reviews to recommend Best possible drugs to take.
 
 you can access the colab from here : 
